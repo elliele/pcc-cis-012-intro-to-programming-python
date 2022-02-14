@@ -17,12 +17,12 @@ try:
                 # If number of hours worked greater than 40 and less than and equal to 60
                 # multiply hourly_rate by 1.5
                 elif hours > 40 and hours <= 60:
-                    pay_amount= hourly_rate*1.5*hours
+                    pay_amount= hourly_rate*1.5*(hours-40) + hourly_rate*40
                     print("Your pay for this week is:", pay_amount)
 
                 # If number of hours worked greater than 60, multiply hourly_rate by 2.
                 elif hours > 60:
-                    pay_amount = hourly_rate*2*hours
+                    pay_amount = hourly_rate*2*(hours-60) + hourly_rate*1.5*20 + hourly_rate*40
                     print("Your pay for this week is:", pay_amount)
 
             else:
